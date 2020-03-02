@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>待办事项清单</title>
+        <script src="script.js"></script>
+        <link href="style.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body background="https://api.dujin.org/bing/1920.php">
+        <div id="AlignCenter">
+            <div id="title"><h1 align="center">To Do List</h1></div>
+            <div id="addalign" align="center"><input id="add" type="button" value="Add One!" onclick="Add()" class="HeadButton">
+            <input id="refresh" type="button" value="Refresh It!" onclick="refresh()" class="HeadButton">
+            <input id="delete" type="button" value="Delete All!" onclick="Delete_All()" class="HeadButton"></div>
+            <ul id="list">
+            </ul>
+        </div>
+    </body>
+</html>
