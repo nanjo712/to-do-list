@@ -1,0 +1,37 @@
+#title
+{
+    background:rgba(13, 216, 148, 0.61);
+    padding-left:10px;
+    padding-right:10px;
+}
+#AlignCenter
+{
+    width:750px;
+    height:1000px;
+    margin:0 auto;
+    font-family:"Microsoft Yahei";
+    background-color:#95e3eab4;
+    padding-right:10px;
+    padding-left:10px;
+}
+.Finished
+{
+    color:green;
+    font-weight:bold;
+}
+.HeadButton
+{
+    width:200px;
+    font-size:2em;
+    height:50px;
+}
+li
+{
+    font-size:1.5em;
+    line-height:1.2em;
+}
+.EventButton
+{
+    height:30px;
+    width:55px;
+}

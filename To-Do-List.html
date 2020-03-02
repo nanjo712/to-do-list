@@ -3,81 +3,13 @@
     <head>
         <meta charset="utf-8">
         <title>待办事项清单</title>
-        <script type="text/javascript">
-            var tot=0,del_list=new Array();
-            function Doneit(x)
-            {
-                del_list.push(x);
-                x=String(x);
-                var thing=document.getElementById("F"+x);
-                thing.innerHTML+="&nbsp;<span class=\"Finished\">It has been done</span>"
-                thing=document.getElementById("B"+x);
-                thing.disabled=true;
-            }
-            function Add()
-            {
-                var addit=prompt("What would you want to add?"),now=String(++tot);
-                if (addit==null) return ;
-                var newnode=document.createElement("li"),fathernode=document.getElementById("list");
-                newnode.id="F"+now;
-                newnode.innerHTML=addit;
-                var FinishButton=document.createElement("input");
-                FinishButton.type="button";FinishButton.id="B"+now;FinishButton.value="Finish!";
-                FinishButton.setAttribute("onclick","Doneit("+now+")");FinishButton.style.float="right";
-                newnode.appendChild(FinishButton);
-                var DeleteButton=document.createElement("input");
-                DeleteButton.type="button";DeleteButton.id="B"+now;DeleteButton.value="Delete!";
-                DeleteButton.setAttribute("onclick","delete_one("+now+")");DeleteButton.style.float="right";
-                newnode.appendChild(DeleteButton);
-                fathernode.appendChild(newnode);
-            }
-            function delete_one(now)
-            {
-                list_node=document.getElementById("list");
-                list_node.removeChild(document.getElementById("F"+String(now)));
-            }
-            function refresh()
-            {
-                var list_node=document.getElementById("list");
-                for (var i=0;i<del_list.length;i++)
-                    list_node.removeChild(document.getElementById("F"+String(del_list[i])));
-                del_list=new Array();
-            }
-            function Delete_All()
-            {
-                var list_node=document.getElementById("list"),child_node=document.getElementsByTagName("li");
-                var len=child_node.length;
-                for (var i=0;i<len;i++)
-                    list_node.removeChild(child_node[0]);
-            }
-        </script>
-        <style>
-            #title
-            {
-                background:rgba(13, 216, 148, 0.61);
-            }
-            #AlignCenter
-            {
-                width:750px;
-                margin:0 auto;
-            }
-            .Finished
-            {
-                color:green;
-                font-weight:bold;
-            }
-            .HeadButton
-            {
-                width:200px;
-                font-size:2em;
-                height:50px;
-            }
-        </style>
+        <script src="script.js"></script>
+        <link href="style.css" rel="stylesheet" type="text/css" />
     </head>
-    <body bgcolor="#FFFFFF">
+    <body background="https://api.dujin.org/bing/1920.php">
         <div id="AlignCenter">
             <div id="title"><h1 align="center">To Do List</h1></div>
-            <div id="addalign" align="right"><input id="add" type="button" value="Add One!" onclick="Add()" class="HeadButton">
+            <div id="addalign" align="center"><input id="add" type="button" value="Add One!" onclick="Add()" class="HeadButton">
             <input id="refresh" type="button" value="Refresh It!" onclick="refresh()" class="HeadButton">
             <input id="delete" type="button" value="Delete All!" onclick="Delete_All()" class="HeadButton"></div>
             <ul id="list">
