@@ -15,12 +15,12 @@ function Add() {
     newnode.innerHTML = addit;
     var FinishButton = document.createElement("input");
     FinishButton.type = "button"; FinishButton.id = "B" + now; FinishButton.value = "Finish!";
-    FinishButton.setAttribute("onclick", "Doneit(" + now + ")");// FinishButton.style.float = "right";
+    FinishButton.setAttribute("onclick", "Doneit(" + now + ")"); FinishButton.style.float = "right";
     FinishButton.className="EventButton";
     newnode.appendChild(FinishButton);
     var DeleteButton = document.createElement("input");
     DeleteButton.type = "button"; DeleteButton.id = "B" + now; DeleteButton.value = "Delete!";
-    DeleteButton.setAttribute("onclick", "delete_one(" + now + ")");// DeleteButton.style.float = "right";
+    DeleteButton.setAttribute("onclick", "delete_one(" + now + ")");DeleteButton.style.float = "right";
     DeleteButton.className="EventButton";
     newnode.appendChild(DeleteButton);
     fathernode.appendChild(newnode);
