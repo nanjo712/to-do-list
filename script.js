@@ -16,12 +16,12 @@ function Add() {
     var FinishButton = document.createElement("input");
     FinishButton.type = "button"; FinishButton.id = "B" + now; FinishButton.value = "Finish!";
     FinishButton.setAttribute("onclick", "Doneit(" + now + ")"); FinishButton.style.float = "right";
-    FinishButton.className="EventButton";
+    FinishButton.className="FinishButton";
     newnode.appendChild(FinishButton);
     var DeleteButton = document.createElement("input");
     DeleteButton.type = "button"; DeleteButton.id = "B" + now; DeleteButton.value = "Delete!";
     DeleteButton.setAttribute("onclick", "delete_one(" + now + ")");DeleteButton.style.float = "right";
-    DeleteButton.className="EventButton";
+    DeleteButton.className="DeleteButton";
     newnode.appendChild(DeleteButton);
     fathernode.appendChild(newnode);
 }

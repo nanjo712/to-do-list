@@ -21,6 +21,10 @@
 }
 .HeadButton
 {
+    border-radius: 10px;
+    background-color: cornflowerblue;
+    border-color:#69c8cf;
+    color:white;
     width:200px;
     font-size:2em;
     height:50px;
@@ -30,8 +34,26 @@ li
     font-size:1.5em;
     line-height:1.7em;
 }
-.EventButton
+.FinishButton
 {
+    border-radius: 10px;
+    border-color: aqua;
     height:35px;
     width:55px;
+    color:white;
+    background: #1d98eb;
+}
+.DeleteButton
+{
+    border-radius: 10px;
+    border-color:#d8b927;
+    height:35px;
+    width:55px;
+    color:white;
+    background: #f03203;
+}
+input:disabled
+{
+    border-color: grey;
+    background: grey;
 }
