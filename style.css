@@ -3,6 +3,7 @@
     background:rgba(13, 216, 148, 0.61);
     padding-left:10px;
     padding-right:10px;
+    color:#efe636;
 }
 #AlignCenter
 {
@@ -10,7 +11,7 @@
     height:1000px;
     margin:0 auto;
     font-family:"Microsoft Yahei";
-    background-color:#95e3eab4;
+    background-color:rgba(150,227,234,0.7);
     padding-right:10px;
     padding-left:10px;
 }
@@ -56,4 +57,20 @@ input:disabled
 {
     border-color: grey;
     background: grey;
+}
+blockquote
+{
+    font-family:"Microsoft Yahei";
+    font-weight:bold;
+}
+.AddTextArea
+{
+    margin-top:1em;
+    border-radius: 10px;
+    resize: none;
+    height:20px;
+    width:400px;
+    text-align:left;
+    height:2.5em;
+    font-family:"Microsoft Yahei";
 }

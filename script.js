@@ -8,18 +8,19 @@ function Doneit(x) {
     thing.disabled = true;
 }
 function Add() {
-    var addit = prompt("What would you want to add?"), now = String(++tot);
-    if (addit == null) return;
+    var addit = document.getElementById("addtext").value, now = String(++tot);
+    document.getElementById("addtext").value=null;
+    if (addit == "") return;
     var newnode = document.createElement("li"), fathernode = document.getElementById("list");
     newnode.id = "F" + now;
     newnode.innerHTML = addit;
     var FinishButton = document.createElement("input");
-    FinishButton.type = "button"; FinishButton.id = "B" + now; FinishButton.value = "Finish!";
+    FinishButton.type = "button"; FinishButton.id = "B" + now; FinishButton.value = "Finish";
     FinishButton.setAttribute("onclick", "Doneit(" + now + ")"); FinishButton.style.float = "right";
     FinishButton.className="FinishButton";
     newnode.appendChild(FinishButton);
     var DeleteButton = document.createElement("input");
-    DeleteButton.type = "button"; DeleteButton.id = "B" + now; DeleteButton.value = "Delete!";
+    DeleteButton.type = "button"; DeleteButton.id = "B" + now; DeleteButton.value = "Delete";
     DeleteButton.setAttribute("onclick", "delete_one(" + now + ")");DeleteButton.style.float = "right";
     DeleteButton.className="DeleteButton";
     newnode.appendChild(DeleteButton);
@@ -31,8 +32,10 @@ function delete_one(now) {
 }
 function refresh() {
     var list_node = document.getElementById("list");
+    var tmp;
     for (var i = 0; i < del_list.length; i++)
-        list_node.removeChild(document.getElementById("F" + String(del_list[i])));
+        if ((document.getElementById("F" + String(del_list[i])))!=null)
+            list_node.removeChild(document.getElementById("F" + String(del_list[i])));
     del_list = new Array();
 }
 function Delete_All() {
