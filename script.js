@@ -3,7 +3,7 @@ function Doneit(x) {
     del_list.push(x);
     x = String(x);
     var thing = document.getElementById("F" + x);
-    thing.innerHTML += "&nbsp;<span class=\"Finished\">It has been done</span>"
+    thing.innerHTML = "<span style=\"text-decoration:line-through;color:grey;\">"+thing.innerHTML+"</span>"+"&nbsp;<span class=\"Finished\">It has been done</span>"
     thing = document.getElementById("B" + x);
     thing.disabled = true;
 }
