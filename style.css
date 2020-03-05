@@ -1,9 +1,13 @@
+*
+{
+    outline: none;
+}
 #title
 {
     background:rgba(13, 216, 148, 0.61);
     padding-left:10px;
     padding-right:10px;
-    color:#efe636;
+    color:#ff7b00;
 }
 #AlignCenter
 {
@@ -24,40 +28,52 @@
 .HeadButton
 {
     border-radius: 10px;
+    border:0;
     background-color: cornflowerblue;
-    border-color:#69c8cf;
     color:white;
     width:200px;
     font-size:2em;
     height:50px;
 }
+.HeadButton:active
+{
+    background-color: rgb(39,47,188);
+}
 li
 {
-    font-size:1.5em;
-    line-height:1.7em;
+    font-size:1.2em;
+    line-height:2em;
 }
 .FinishButton
 {
     border-radius: 10px;
-    border-color: aqua;
+    border:0;
     height:35px;
     width:55px;
     color:white;
     background: #1d98eb;
+    position: relative;
 }
 .DeleteButton
 {
     border-radius: 10px;
-    border-color:#d8b927;
+    border:0;
     height:35px;
     width:55px;
     color:white;
     background: #f03203;
+    position: relative;
+    right:5px;
 }
-input:disabled
+.FinishButton:active
 {
-    border-color: grey;
-    background: grey;
+    background:#66ffcc;
+    color:black;
+}
+.DeleteButton:active
+{
+    background: #ffff00;
+    color:black;
 }
 blockquote
 {

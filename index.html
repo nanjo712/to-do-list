@@ -9,11 +9,14 @@
     <body background="https://api.dujin.org/bing/1920.php">
         <div id="AlignCenter">
             <div id="title"><h1 align="center">To Do List</h1></div>
-            <div><blockquote>总有人要AK IOI的，为什么不能是<span style="color:red">我</span>呢？<div align="right">——朱队</div></div>
-            <div id="addalign" align="center"><input id="add" type="button" value="Add One" onclick="Add()" class="HeadButton">
-            <input id="refresh" type="button" value="Refresh It" onclick="refresh()" class="HeadButton">
-            <input id="delete" type="button" value="Delete All" onclick="Delete_All()" class="HeadButton"><br/>
-            <textarea id="addtext" placeholder="Please type the thing you want to add here." class="AddTextArea"></textarea>
+            <div><blockquote>总有人要AK IOI的，为什么不能是<span style="color:red">我</span>呢？<div align="right">——朱队</div></blockquote></div>
+            <div id="addalign" align="center">
+                <div id="Add">
+                    <textarea id="addtext" placeholder="Please type the thing you want to add here." class="AddTextArea"></textarea>
+                    <button id="add" onclick="Add()" class="HeadButton" style="position: relative;bottom: 10px;">Add One</button><br/>
+                </div>
+                <button id="refresh" onclick="Refresh()" class="HeadButton">Refresh It</button>
+                <button id="delete" onclick="Delete_All()" class="HeadButton">Delete All</button>
             </div>
             <ul id="list">
             </ul>
