@@ -1,4 +1,4 @@
-var tot = 0, del_list = new Array();
+var tot = 0, del_list = new Array(),times=0;
 function Doneit(x) {
     del_list.push(x);
     x = String(x);
@@ -11,13 +11,20 @@ function Doneit(x) {
     var Del_Button= document.getElementById("D"+x);
     Del_Button.style.background="green";
 }
+function Mobai()
+{
+    times++;
+    document.getElementById("TIMES").innerHTML=times;
+}
 function Add() {
     var addit = document.getElementById("addtext").value, now = String(++tot), nowDate = new Date();
     document.getElementById("addtext").value=null;
     if (addit == "") return;
     var newnode = document.createElement("li"), fathernode = document.getElementById("list");
     newnode.id = "F" + now;
-    newnode.innerHTML = addit + "&nbsp;<span style=\"font-size:0.75em\">" + nowDate.getHours() + ":" + nowDate.getMinutes() + "时加入</span>";
+    newnode.innerHTML = addit + "&nbsp;<span style=\"font-size:0.75em\">" + nowDate.getHours() + ":</span>";
+    if (nowDate.getMinutes() < 10) newnode.innerHTML += "<span style=\"font-size:0.75em\">0" + nowDate.getMinutes() + "时加入</span>";
+    else newnode.innerHTML = addit + "&nbsp;<span style=\"font-size:0.75em\">" + nowDate.getHours() + ":" + nowDate.getMinutes() + "时加入</span>";
     var FinishButton = document.createElement("input");
     FinishButton.type = "button"; FinishButton.id = "B" + now; FinishButton.value = "Finish";
     FinishButton.setAttribute("onclick", "Doneit(" + now + ")"); FinishButton.style.float = "right";

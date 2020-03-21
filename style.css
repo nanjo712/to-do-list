@@ -19,6 +19,11 @@
     padding-right:10px;
     padding-left:10px;
 }
+#TIMES
+{
+    font-size:1.2em;
+    line-height:2em;
+}
 .Finished
 {
     color:green;
@@ -43,6 +48,20 @@ li
 {
     font-size:1.2em;
     line-height:2em;
+}
+.MoButton
+{
+    border-radius: 10px;
+    border:0;
+    background-color: cornflowerblue;
+    color:white;
+    width:100px;
+    font-size:1em;
+    height:25px;
+}
+.MoButton:active
+{
+    background-color: rgb(39,47,188);
 }
 .FinishButton
 {
@@ -84,8 +103,7 @@ blockquote
 {
     margin-top:1em;
     border-radius: 10px;
-    resize: none;
-    height:20px;
+    resize:none;
     width:400px;
     text-align:left;
     height:2.5em;
